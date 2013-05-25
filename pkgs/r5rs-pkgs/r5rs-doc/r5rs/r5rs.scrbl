@@ -1,5 +1,7 @@
 #lang scribble/doc
 @(require scribble/manual
+          (only-in scribble/core style)
+          scribble/html-properties
           (for-label (only-meta-in 0 r5rs)
                      (only-in r5rs syntax-rules ...)
                      (only-in mzscheme #%plain-module-begin)
@@ -19,9 +21,11 @@
 @(define r5rs @elem{R@superscript{5}RS})
 @(define drs-doc '(lib "scribblings/drracket/drracket.scrbl"))
 
+@(define r5rs-std (style #f (list (install-resource "scribblings/r5rs-std"))))
+
 @title{R5RS: Legacy Scheme}
 
-The @link["../r5rs-std/index.html"]{The Revised@superscript{5} Report
+The @link[#:style r5rs-std "r5rs-std/index.html"]{The Revised@superscript{5} Report
 on the Algorithmic Language Scheme} defines a dialect of Scheme. We
 use @defterm{@|r5rs|} to refer to both the standard and the language
 defined by the standard.
@@ -201,7 +205,7 @@ importing @racketmodname[r5rs/init].
    (map (lambda (b)
           (list (string->symbol (car b))
                 (cadr b)
-                (build-path 'up "r5rs-std" (caddr b))
+                (build-path "r5rs-std" (caddr b))
                 (cadddr b)))
         bindings)))
 
