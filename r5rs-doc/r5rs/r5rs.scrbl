@@ -154,8 +154,8 @@ syntax, so there is no danger of collisions in @|r5rs| programs):
 #%app #%datum #%top #%top-interaction #%require #%provide
 ]
 
-It also provides @racketmodname[racket]'s
-@racket[#%plain-module-begin] as @racket[#%module-begin]. Note that
+It also provides a @racketidfont{#%module-begin} binding that acts like
+@racketmodname[racket]'s @racket[#%plain-module-begin]. Note that
 @racket[#%require] can be used to import Racket libraries into an
 otherwise @|r5rs| program, and @racket[#%provide] can be used to
 export from a module that is implemented in an @|r5rs|-like language.
@@ -170,8 +170,8 @@ is @racket[mcdr], and @racket[map] is @racketmodname[compatibility/mlist]'s
 @racket[mmap], and so on.
 
 An @|r5rs| @defterm{environment} is implemented as a
-@racket[racket/base] @defterm{namespace}. Also, relative to
-@racket[racket/base], the @racket[expr] passed to @racket[eval] is
+@racketmodname[racket/base] @defterm{namespace}. Also, relative to
+@racketmodname[racket/base], the @racket[expr] passed to @racket[eval] is
 constructed using mutable pairs.
 
 The @racket[scheme-report-environment] function returns a namespace
@@ -181,7 +181,7 @@ that they can be redefined.
 
 The @racket[null-environment] function returns a namespace
 containing the syntactic forms of @racketmodname[r5rs], not including
-@racket[#%module-begin] (which is not useful outside of a module).
+@racketidfont{#%module-begin} (which is not useful outside of a module).
 
 @; ----------------------------------------
 
