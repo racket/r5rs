@@ -8,3 +8,5 @@
 (define pkg-desc "implementation (no documentation) part of \"r5rs\"")
 
 (define pkg-authors '(mflatt))
+
+(define version "1.1")
