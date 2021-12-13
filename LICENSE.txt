@@ -11,7 +11,7 @@ for the full text of the licenses.
 
 This repository contains the text of the R5RS standard, in
 r5rs-doc/r5rs/scribblings/. That document is
-distributed with the following license:
+distributed under the SchemeReport license:
 
     We intend this report to belong to the entire Scheme community,
     and so we grant permission to copy it in whole or in part without
