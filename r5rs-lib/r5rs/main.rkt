@@ -274,7 +274,8 @@
                       (syntax/loc stx
                         (r5rs:lambda args . body))])
          (syntax/loc stx
-           (define id proc)))]
+           ;; use `r5rs:define` again, in case curried mode was used
+           (r5rs:define id proc)))]
       [(_ . rest)
        (syntax/loc stx
          (define . rest))]))
