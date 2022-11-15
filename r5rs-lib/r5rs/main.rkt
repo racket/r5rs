@@ -70,6 +70,7 @@
            char-ci=? char-ci<? char-ci>? char-ci<=? char-ci>=? 
            char-upcase boolean? eqv? equal? 
            (rename-out [r5rs:force force])
+           promise?
            call-with-values values dynamic-wind
            (rename-out [meval eval])
            scheme-report-environment null-environment interaction-environment)
